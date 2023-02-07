@@ -27,21 +27,24 @@ const AddTodo = () => {
 
     setValue("");
   };
+
+  const onSubmitEnter = (event) => {
+    if (event.key === "Enter") {
+      onSubmit(event);
+    }
+  };
   return (
-    <div className="m-3 text-center">
-      <InputGroup>
+    <div className="mx-2 d-flex justify-content-center">
+      <InputGroup style={{ maxWidth: "50rem" }}>
         <Form.Control
           placeholder="Add Task"
           aria-label="Add Task"
           aria-describedby="basic-addon2"
           value={value}
           onChange={(event) => setValue(event.target.value)}
+          onKeyDown={onSubmitEnter}
         />
-        <Button
-          variant="outline-primary"
-          id="button-addon2"
-          onClick={onSubmit}
-        >
+        <Button variant="outline-primary" id="button-addon2" onClick={onSubmit}>
           Save
         </Button>
       </InputGroup>

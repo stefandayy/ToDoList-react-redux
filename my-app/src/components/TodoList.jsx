@@ -9,13 +9,13 @@ const TodoList = () => {
     return state.tasks;
   });
   return (
-    <>
-      <ListGroup variant="flush" className="m-3">
+    <div className="my-5 d-flex justify-content-center">
+      <ListGroup variant="flush" style={{width:"80rem"}}>
       {todos.map((todo) => (
          <TodoItem id={todo.id} title={todo.name} completed={todo.completed} />
       ))}
     </ListGroup>
-    </>
+    </div>
   );
 };
 

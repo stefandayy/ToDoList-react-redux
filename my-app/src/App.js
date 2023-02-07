@@ -5,12 +5,14 @@ import TodoList from "./components/TodoList";
 
 function App() {
   return (
-   <>
-   <h1 className="app-title mx-3"> My Tasks</h1>
-   <AddTodo/>
-   <TodoList/>
-   <FooterComponent/>
-   </>
+    <>
+      <h1 className="app-title mx-3"> My Tasks.</h1>
+   
+        <AddTodo />
+        <TodoList />
+
+      <FooterComponent />
+    </>
   );
 }
 
